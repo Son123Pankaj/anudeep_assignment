@@ -1,39 +1,43 @@
 import { Link } from "react-router-dom";
 
 const linkStyle = {
-    color: "white",
-    margin: "10px",
-    textDecoration: "none",
-    fontWeight: "bold"
+  color: "white",
+  textDecoration: "none",
+  margin: "15px",
+  fontSize: "18px",
+  fontWeight: "bold"
 };
 
 export default function Header() {
-    return (
-        <>
-            <h2>Welcome Header Page</h2>
+  return (
+    <div
+      style={{
+        background: "#1976d2",
+        padding: "20px",
+        textAlign: "center"
+      }}
+    >
+      <h1 style={{ color: "white" }}>React Routing Example</h1>
 
-            <h1>React Routing Demo</h1>
+      <Link style={linkStyle} to="/">
+        Home
+      </Link>
 
-            <div
-                style={{
-                    background: "#007bff",
-                    padding: "15px"
-                }}
-            >
-                <Link style={linkStyle} to="/home">Home</Link>
+      <Link style={linkStyle} to="/about">
+        About Us
+      </Link>
 
-                <Link style={linkStyle} to="/about">About</Link>
+      <Link style={linkStyle} to="/services">
+        Services
+      </Link>
 
-                <Link style={linkStyle} to="/services">Services</Link>
+      <Link style={linkStyle} to="/faq">
+        FAQ
+      </Link>
 
-                <Link style={linkStyle} to="/faq">FAQ</Link>
-
-                <Link style={linkStyle} to="/account">My Account</Link>
-
-                <Link style={linkStyle} to="/color">Color Task</Link>
-
-                <Link style={linkStyle} to="/gst">GST Task</Link>
-            </div>
-        </>
-    );
+      <Link style={linkStyle} to="/account">
+        My Account
+      </Link>
+    </div>
+  );
 }
